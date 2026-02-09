@@ -1,0 +1,27 @@
+---
+import Layout from "../layouts/Layout.astro";
+import { Button } from "@heroui/react";
+---
+
+<Layout title="404 - Page Not Found">
+    <main
+        class="min-h-[60vh] flex flex-col items-center justify-center text-center space-y-6"
+    >
+        <h1 class="text-9xl font-black text-primary/20">404</h1>
+        <div class="space-y-2">
+            <h2 class="text-3xl font-bold">Market not found</h2>
+            <p class="text-default-500">
+                The market you're looking for doesn't exist or has been closed.
+            </p>
+        </div>
+        <Button
+            as="a"
+            href="/markets"
+            color="primary"
+            variant="shadow"
+            className="font-bold h-12 px-8 rounded-xl"
+        >
+            Back to Markets
+        </Button>
+    </main>
+</Layout>

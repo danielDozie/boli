@@ -1,17 +1,14 @@
 ---
-
+import Layout from "../layouts/Layout.astro";
+import { HeroCards } from "../components/HeroCards";
+import { Features } from "../components/Features";
+import { HotMarkets } from "../components/HotMarkets";
 ---
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<link rel="icon" href="/favicon.ico" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-		<h1>Astro</h1>
-	</body>
-</html>
+<Layout title="Boli - Social Predictions">
+	<main class="max-w-7xl mx-auto px-6">
+		<HeroCards client:load />
+		<Features client:load />
+		<HotMarkets client:load />
+	</main>
+</Layout>

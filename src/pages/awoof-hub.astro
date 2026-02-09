@@ -1,0 +1,22 @@
+---
+import Layout from "../layouts/Layout.astro";
+import { AwoofHero } from "../components/awoof/AwoofHero";
+import { AwoofFeatures } from "../components/awoof/AwoofFeatures";
+import { RedeemMarketplace } from "../components/awoof/RedeemMarketplace";
+---
+
+<Layout title="Awoof Hub - Boli">
+    <main class="max-w-7xl mx-auto px-6 py-6 space-y-8">
+        <section>
+            <AwoofHero client:load />
+        </section>
+
+        <section>
+            <AwoofFeatures client:load />
+        </section>
+
+        <section>
+            <RedeemMarketplace client:load />
+        </section>
+    </main>
+</Layout>

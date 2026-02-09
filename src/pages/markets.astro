@@ -1,0 +1,10 @@
+---
+import Layout from "../layouts/Layout.astro";
+import { MarketsView } from "../components/MarketsView";
+---
+
+<Layout title="Markets - Boli Predictions">
+    <main class="max-w-7xl mx-auto px-6">
+        <MarketsView client:load />
+    </main>
+</Layout>

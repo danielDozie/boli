@@ -1,0 +1,23 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import { nigerianMarkets } from "../../data/markets";
+import { MarketDetailView } from "../../components/market-detail/MarketDetailView";
+import { MarketDetailViewV2 } from "../../components/market-detail-v2/MarketDetailViewV2";
+
+const { id } = Astro.params;
+const market = nigerianMarkets.find((m) => m.id === id);
+
+if (!market) {
+    return Astro.redirect("/404");
+}
+---
+
+<Layout title={`${market.title} - Boli`}>
+    <main class="max-w-7xl mx-auto px-6">
+        {/* Current V1 Layout */}
+        <MarketDetailView client:load market={market} />
+
+        {/* V2 Layout - Commented out */}
+        {/* <MarketDetailViewV2 client:load market={market} /> */}
+    </main>
+</Layout>
