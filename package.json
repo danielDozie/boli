@@ -12,6 +12,7 @@
     "@astrojs/node": "^9.1.1",
     "@astrojs/react": "^4.2.0",
     "@astrojs/tailwind": "^6.0.0",
+    "@astrojs/vercel": "^9.0.4",
     "@heroui/react": "^2.7.2",
     "astro": "^5.17.1",
     "autoprefixer": "^10.4.20",
